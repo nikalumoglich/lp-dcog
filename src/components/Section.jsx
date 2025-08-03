@@ -82,8 +82,11 @@ const SectionContainer = styled.section`
     padding-bottom: 64px;
   }
   @media (max-width: 500px) {
-    padding: 16px 2vw 16px 2vw;
+    padding: 16px 16px 16px 16px; // Increased lateral padding
     margin-top: 24px;
+  }
+  @media (max-width: 400px) {
+    padding: 16px 20px 16px 20px; // Even more padding for very small screens
   }
 `;
 
@@ -92,9 +95,12 @@ const Content = styled.div`
   max-width: 700px;
   text-align: center;
   @media (max-width: 500px) {
-    max-width: 100vw;
-    width: 100vw;
+    max-width: calc(100vw - 32px); // Account for padding
+    width: 100%;
     overflow-x: hidden;
+  }
+  @media (max-width: 400px) {
+    max-width: calc(100vw - 40px); // Account for increased padding
   }
 `;
 
@@ -142,9 +148,13 @@ const Description = styled.p`
     font-size: 1.25rem;
   }
   @media (max-width: 500px) {
-    max-width: 98vw;
+    max-width: 100%;
     overflow-x: hidden;
     word-break: break-word;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
   }
 `;
 

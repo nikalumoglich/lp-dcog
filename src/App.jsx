@@ -237,6 +237,13 @@ const JobDescription = styled.p`
   max-width: 600px;
   text-align: center;
   margin-bottom: 18px;
+  @media (max-width: 500px) {
+    max-width: 100%;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
+  }
 `;
 
 const JobSubtitle = styled.h3`
@@ -300,6 +307,12 @@ const AboutSection = styled.section`
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
+  @media (max-width: 500px) {
+    padding: 48px 16px 48px 16px; // Increased lateral padding
+  }
+  @media (max-width: 400px) {
+    padding: 48px 20px 48px 20px; // Even more padding for very small screens
+  }
 `;
 
 const AboutTitle = styled.h2`
@@ -318,6 +331,13 @@ const AboutDescription = styled.p`
   font-size: 1.1rem;
   max-width: 600px;
   text-align: center;
+  @media (max-width: 500px) {
+    max-width: 100%;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
+  }
 `;
 
 const ConnectionImage = styled.img`

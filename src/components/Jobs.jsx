@@ -163,9 +163,13 @@ const Description = styled.p`
     font-size: 1.25rem;
   }
   @media (max-width: 500px) {
-    max-width: 98vw;
+    max-width: 100%;
     overflow-x: hidden;
     word-break: break-word;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
   }
 `;
 
@@ -175,6 +179,12 @@ const FlowchartSection = styled.section`
   align-items: center;
   background: #111;
   padding: 16px 8px 16px 8px;
+  @media (max-width: 500px) {
+    padding: 16px 16px 16px 16px; // Increased lateral padding
+  }
+  @media (max-width: 400px) {
+    padding: 16px 20px 16px 20px; // Even more padding for very small screens
+  }
 `;
 
 const FlowchartTitle = styled.h2`
@@ -228,6 +238,12 @@ const Section2 = styled.section`
     padding-top: 64px;
     padding-bottom: 64px;
   }
+  @media (max-width: 500px) {
+    padding: 32px 16px 32px 16px; // Increased lateral padding
+  }
+  @media (max-width: 400px) {
+    padding: 32px 20px 32px 20px; // Even more padding for very small screens
+  }
 `;
 
 const Section2Title = styled.h2`
@@ -257,9 +273,13 @@ const JobDescription = styled.p`
     font-size: 1.25rem;
   }
   @media (max-width: 500px) {
-    max-width: 98vw;
+    max-width: 100%;
     overflow-x: hidden;
     word-break: break-word;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
   }
 `;
 

@@ -66,6 +66,12 @@ const Content = styled.div`
   padding: 32px 8px 32px 8px;
   min-height: calc(100vh - 48px); /* 48px = altura do Footer */
   box-sizing: border-box;
+  @media (max-width: 500px) {
+    padding: 32px 16px 32px 16px; // Increased lateral padding
+  }
+  @media (max-width: 400px) {
+    padding: 32px 20px 32px 20px; // Even more padding for very small screens
+  }
 `;
 
 const Title = styled.h1`
@@ -80,4 +86,11 @@ const Description = styled.p`
   font-size: 1.1rem;
   max-width: 600px;
   text-align: center;
+  @media (max-width: 500px) {
+    max-width: 100%;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
+  }
 `;

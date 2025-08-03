@@ -63,6 +63,12 @@ const Section2Container = styled.section`
     padding-top: 64px;
     padding-bottom: 64px;
   }
+  @media (max-width: 500px) {
+    padding: 32px 16px 32px 16px; // Increased lateral padding
+  }
+  @media (max-width: 400px) {
+    padding: 32px 20px 32px 20px; // Even more padding for very small screens
+  }
 `;
 
 const Section2Title = styled.h2`
@@ -82,6 +88,13 @@ const Section2Description = styled.p`
   margin: 0 auto 32px auto;
   @media (min-width: 800px) {
     font-size: 1.25rem;
+  }
+  @media (max-width: 500px) {
+    max-width: 100%;
+    padding: 0 8px; // Additional padding for text
+  }
+  @media (max-width: 400px) {
+    padding: 0 12px; // More padding for very small screens
   }
 `;
 
