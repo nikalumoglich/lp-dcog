@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const items = [
@@ -47,13 +48,19 @@ export default function Section({ onAnimationComplete, id }) {
           >
             {item.type === 'title' && <Title>{item.content}</Title>}
             {item.type === 'desc' && <Description>{item.content}</Description>}
-            {item.type === 'button' && <JoinButton>{item.content}</JoinButton>}
+            {item.type === 'button' && <JoinButtonComponent content={item.content}></JoinButtonComponent>}
             {item.type === 'subtitle' && <Subtitle>{item.content}</Subtitle>}
             {item.type === 'desc2' && <Description>{item.content}</Description>}
           </motion.div>
         ))}
       </Content>
     </SectionContainer>
+  );
+}
+
+function JoinButtonComponent(content) {
+  return (
+    <JoinButton to="https://docs.google.com/forms/d/e/1FAIpQLSc-_lOd5n59aaTHMTg3xvu5KzhyG3qXcc0UwQMhoCu72jYIKg/viewform?usp=dialog">JOIN WAITLIST</JoinButton>
   );
 }
 
@@ -141,7 +148,7 @@ const Description = styled.p`
   }
 `;
 
-const JoinButton = styled.button`
+const JoinButton = styled(Link)`
   background: linear-gradient(0deg, #f4f4f4 0%, #696363 100%);
   color: #222;
   border: none;

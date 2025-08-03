@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export default function Footer() {
   return (
     <FooterContainer>
-      <Copyright>©dcog 2025. Todos os direitos reservados.</Copyright>
+      <Copyright>© dcog 2025</Copyright>
     </FooterContainer>
   );
 }

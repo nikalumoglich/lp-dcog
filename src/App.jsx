@@ -157,10 +157,12 @@ export default function App() {
           custom={0.6}
         >
           <AboutDescription>
-            With a very talented team with a long track of successful projects
-            delivered across multiple industries, we believe we can change the
-            AI landscape by providing powerful tools to enable companies to
-            enter the AI era with truly impactful projects.
+            With an exceptionally talented team that boasts a proven track record of delivering successful projects 
+            across a wide range of industries, we are confident in our ability to reshape the AI landscape. 
+            Our mission is to develop and provide cutting-edge, powerful tools that empower companies to seamlessly transition 
+            into the AI era. By combining innovation, expertise, and a deep understanding of market needs, we aim to enable 
+            organizations to implement truly impactful projects that drive measurable results, 
+            foster growth, and unlock unprecedented opportunities in the evolving world of artificial intelligence.
           </AboutDescription>
         </motion.div>
       </AboutSection>
