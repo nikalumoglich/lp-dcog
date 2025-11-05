@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const items = [
-  { type: 'title', content: 'Leverage your data for high impact AI Projects' },
+  { type: 'title', content: 'Improve the performance of your campaigns' },
   {
     type: 'desc',
-    content: `Data is the most valuable asset companies have, but only if it's put to use. Create real impact AI projects with your own data, integrated with your own product.`,
+    content: 'Leverage your existing data in novel ways to optimize advertising costs',
   },
 ];
 

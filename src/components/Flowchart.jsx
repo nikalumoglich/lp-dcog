@@ -6,7 +6,7 @@ const items = [
   { type: 'arrow', content: '→' },
   { type: 'box', content: 'Train your model' },
   { type: 'arrow', content: '→' },
-  { type: 'box', content: 'Run inference through an easy to use REST API' },
+  { type: 'box', content: 'Predict your campaign performance' },
 ];
 
 const itemVariants = {

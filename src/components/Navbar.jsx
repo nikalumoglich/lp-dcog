@@ -36,7 +36,6 @@ export default function Navbar() {
         />
       </LogoArea>
       <MenuLinks>
-        <MenuItemLink href="/#jobs">Jobs</MenuItemLink>
         <MenuItemLink href="/#aboutus">About Us</MenuItemLink>
       </MenuLinks>
       <MenuIconArea onClick={() => setOpen((v) => !v)}>
@@ -44,20 +43,6 @@ export default function Navbar() {
       </MenuIconArea>
       {open && (
         <DropdownMenu>
-          <MenuItem
-            href="/#jobs"
-            onClick={(e) => {
-              e.preventDefault();
-              setOpen(false);
-              setTimeout(() => {
-                const el = document.getElementById('jobs');
-                if (el)
-                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100);
-            }}
-          >
-            Jobs
-          </MenuItem>
           <MenuItem
             href="/#aboutus"
             onClick={(e) => {

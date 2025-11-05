@@ -36,12 +36,9 @@ export default function AboutUs() {
           custom={0.6}
         >
           <Description>
-            With an exceptionally talented team that boasts a proven track record of delivering successful projects 
-            across a wide range of industries, we are confident in our ability to reshape the AI landscape. 
-            Our mission is to develop and provide cutting-edge, powerful tools that empower companies to seamlessly transition 
-            into the AI era. By combining innovation, expertise, and a deep understanding of market needs, we aim to enable 
-            organizations to implement truly impactful projects that drive measurable results, 
-            foster growth, and unlock unprecedented opportunities in the evolving world of artificial intelligence.
+            At dcog.ai, we empower digital marketing teams with the next generation of artificial intelligence. Our mission is to help agencies and brands unlock the full potential of their data by designing, training, and deploying custom AI models that drive smarter decisions, sharper targeting, and faster results.
+We specialize in creating AI systems tailored for the dynamic world of digital marketing, from predictive customer behavior models and personalized content engines to automated campaign optimization and sentiment analysis.
+Our team combines expertise in machine learning, data science, and marketing strategy to bridge the gap between cutting-edge AI research and real-world marketing performance. Whether you’re looking to enhance your analytics stack or build proprietary AI tools, we provide the technical foundation and strategic insight to make it happen.
           </Description>
         </motion.div>
       </Content>

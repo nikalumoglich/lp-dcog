@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const items = [
-  { type: 'title', content: 'Machine Learning Made Easy' },
+  { type: 'title', content: 'Predict Campaign Performance' },
   {
     type: 'desc',
     content:
-      'Quickly generate, deploy and integrate custom machine learning AI models trained on your data.',
+      'Quickly generate, deploy and integrate custom machine learning AI models that predict your campaigns performance.',
   },
-  { type: 'button', content: 'JOIN WAITLIST' },
+  { type: 'button', content: 'Get in touch!' },
   { type: 'subtitle', content: 'What we do:' },
   {
     type: 'desc2',
     content:
-      'We found out that training and deploying custom machine learning models that fit your necessities is difficult, so we automated it for you. Unleash the hidden power of your data.',
+      'We train and deploy campaign performance prediction machine learning models. Unleash the hidden power of your data.',
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Section({ onAnimationComplete, id }) {
           >
             {item.type === 'title' && <Title>{item.content}</Title>}
             {item.type === 'desc' && <Description>{item.content}</Description>}
-            {item.type === 'button' && <JoinButtonComponent content={item.content}></JoinButtonComponent>}
+            {item.type === 'button' && <JoinButton to="https://docs.google.com/forms/d/e/1FAIpQLSflygCdBazGWPSnszjs8k7D4-AZcluAFYXAcQbiJNkFkatGZg/viewform?usp=dialog">GET IN TOUCH!</JoinButton>}
             {item.type === 'subtitle' && <Subtitle>{item.content}</Subtitle>}
             {item.type === 'desc2' && <Description>{item.content}</Description>}
           </motion.div>
@@ -57,13 +57,6 @@ export default function Section({ onAnimationComplete, id }) {
     </SectionContainer>
   );
 }
-
-function JoinButtonComponent(content) {
-  return (
-    <JoinButton to="https://docs.google.com/forms/d/e/1FAIpQLSc-_lOd5n59aaTHMTg3xvu5KzhyG3qXcc0UwQMhoCu72jYIKg/viewform?usp=dialog">JOIN WAITLIST</JoinButton>
-  );
-}
-
 const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -73,7 +66,7 @@ const SectionContainer = styled.section`
   background: #111;
   color: #eee;
   padding: 32px 8px 32px 8px;
-  margin-top: -2px;
+  margin-top: 120px;
   @media (min-width: 600px) {
     margin-top: -50px;
   }
@@ -134,6 +127,7 @@ const Subtitle = styled.h2`
   font-size: 1.2rem;
   font-weight: 700;
   margin: 32px 0 8px 0;
+  margin-top: 120px;
   color: #eee;
   @media (min-width: 800px) {
     font-size: 1.5rem;
@@ -143,7 +137,9 @@ const Subtitle = styled.h2`
 const Description = styled.p`
   color: #8a8a8a;
   font-size: 1rem;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  margin-bottom: 36px;
+  padding-top: 40px;
   @media (min-width: 800px) {
     font-size: 1.25rem;
   }
@@ -159,15 +155,15 @@ const Description = styled.p`
 `;
 
 const JoinButton = styled(Link)`
+  position: relative;
   background: linear-gradient(0deg, #f4f4f4 0%, #696363 100%);
+  top: 50px;
   color: #222;
   border: none;
   border-radius: 6px;
-  padding: 12px 56px;
+  padding: 16px 72px;
   font-size: 1.1rem;
   font-weight: 900;
-  margin-top: 32px;
-  margin-bottom: 24px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transition: filter 0.2s, transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1),
@@ -177,7 +173,7 @@ const JoinButton = styled(Link)`
     transform: scale(1.06);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
   }
-  @media (min-width: 800px) {
+  @media (max-width: 1000px) {
     font-size: 1.3rem;
     padding: 16px 72px;
   }
