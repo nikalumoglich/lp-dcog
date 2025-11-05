@@ -4,6 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import AboutUs from './components/AboutUs';
 import './index.css';
+import TagManager from 'react-gtm-module';
+
+const tagManagerArgs = {
+  gtmId: 'AW-17707388272'
+}
+TagManager.initialize(tagManagerArgs)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

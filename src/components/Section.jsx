@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSflygCdBazGWPSnszjs8k7D4-AZcluAFYXAcQbiJNkFkatGZg/viewform?usp=dialog';
+
 const items = [
   { type: 'title', content: 'Predict Campaign Performance' },
   {
@@ -48,7 +50,7 @@ export default function Section({ onAnimationComplete, id }) {
           >
             {item.type === 'title' && <Title>{item.content}</Title>}
             {item.type === 'desc' && <Description>{item.content}</Description>}
-            {item.type === 'button' && <JoinButton to="https://docs.google.com/forms/d/e/1FAIpQLSflygCdBazGWPSnszjs8k7D4-AZcluAFYXAcQbiJNkFkatGZg/viewform?usp=dialog">GET IN TOUCH!</JoinButton>}
+            {item.type === 'button' && <JoinButton to={formUrl}>GET IN TOUCH!</JoinButton>}
             {item.type === 'subtitle' && <Subtitle>{item.content}</Subtitle>}
             {item.type === 'desc2' && <Description>{item.content}</Description>}
           </motion.div>
