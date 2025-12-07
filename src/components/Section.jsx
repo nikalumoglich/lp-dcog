@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
-const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSflygCdBazGWPSnszjs8k7D4-AZcluAFYXAcQbiJNkFkatGZg/viewform?usp=dialog';
+// const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSflygCdBazGWPSnszjs8k7D4-AZcluAFYXAcQbiJNkFkatGZg/viewform?usp=dialog';
+const formUrl = 'https://leadscorer.dcog.ai';
 
 const items = [
   { type: 'title', content: 'Predict Campaign Performance' },
@@ -11,7 +13,7 @@ const items = [
     content:
       'Quickly generate, deploy and integrate custom machine learning AI models that predict your campaigns performance.',
   },
-  { type: 'button', content: 'Get in touch!' },
+  { type: 'button', content: 'TRY IT NOW FOR FREE!' },
   { type: 'subtitle', content: 'What we do:' },
   {
     type: 'desc2',
@@ -19,6 +21,16 @@ const items = [
       'We train and deploy campaign performance prediction machine learning models. Unleash the hidden power of your data.',
   },
 ];
+
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  window.gtag('event', 'conversion', { 'send_to': 'AW-17707388272/sJcOCKyMgbsbEPCaxftB', 'value': 1.0, 'currency': 'BRL', 'event_callback': callback });
+  return false; 
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -50,7 +62,7 @@ export default function Section({ onAnimationComplete, id }) {
           >
             {item.type === 'title' && <Title>{item.content}</Title>}
             {item.type === 'desc' && <Description>{item.content}</Description>}
-            {item.type === 'button' && <JoinButton to={formUrl}>GET IN TOUCH!</JoinButton>}
+            {item.type === 'button' && <JoinButton onClick={() => gtag_report_conversion(formUrl)}>TRY IT NOW FOR FREE!</JoinButton>}
             {item.type === 'subtitle' && <Subtitle>{item.content}</Subtitle>}
             {item.type === 'desc2' && <Description>{item.content}</Description>}
           </motion.div>
